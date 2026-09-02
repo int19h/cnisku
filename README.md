@@ -2,6 +2,8 @@
 
 `cnisku` is a client-side visual playground for Lojban attitudinals. Enter a short string such as `.o'onaicai ri'enai` and a deterministic SVG face renders an editorial interpretation of the attitude.
 
+For a detailed explanation of the semantic model, all 39 mappings, modifier behavior, composition math, and SVG geometry, see [`DESIGN.md`](DESIGN.md).
+
 The app has no runtime dependencies and no build step. All processing stays in the browser, and the repository root can be published directly with GitHub Pages.
 
 The current input is stored in the URL's `q` query parameter as it changes. Opening or copying that URL reproduces the same face, including an explicitly empty expression.
