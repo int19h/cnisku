@@ -53,3 +53,7 @@ The implementation keeps language interpretation separate from facial projection
 The numerical strengths used by the renderer are an artistic convention. CLL specifies an ordered seven-position scale, not equal metric distances, and an unmarked attitude has unspecified intensity. This app uses a moderate visual default for an unmarked root.
 
 Many attitudinals—especially directive, epistemic, spiritual, ethical, and relational ones—are not uniquely visible on a human face. The mapping table marks facial legibility and the interface calls out low-confidence editorial renderings. These mappings are not part of the Lojban specification.
+
+## License
+
+This project is available under the [MIT License](LICENSE).
