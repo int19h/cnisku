@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3eee4">
+    <meta name="description" content="A visual playground for Lojban attitudinals.">
+    <title>cnisku — see a Lojban attitude</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="./" aria-label="cnisku home">
+          <span class="wordmark-mark" aria-hidden="true">◡</span>
+          <span>cnisku</span>
+        </a>
+        <p class="eyebrow">A Lojban attitudinal face</p>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="intro">
+            <p class="kicker">Say the feeling precisely</p>
+            <h1 id="page-title">What does <em>.o'onai</em> look like?</h1>
+            <p class="lede">Type Lojban attitudinals, intensities, and modifiers. The face turns their scales into a deliberately cartoonish expression.</p>
+          </div>
+
+          <div class="playground">
+            <article class="face-card">
+              <div class="face-stage" id="face-stage">
+                <svg id="face" viewBox="0 0 620 620" role="img" aria-labelledby="face-title face-description">
+                  <title id="face-title">Lojban attitudinal face</title>
+                  <desc id="face-description">A neutral cartoon face.</desc>
+                  <defs>
+                    <radialGradient id="aura-gradient" cx="50%" cy="44%" r="55%">
+                      <stop id="aura-inner" offset="0" stop-color="#ffd58a" stop-opacity="0.8" />
+                      <stop id="aura-outer" offset="1" stop-color="#ffd58a" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="face-gradient" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#ffe2ae" />
+                      <stop offset="1" stop-color="#f8bd86" />
+                    </linearGradient>
+                    <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="180%">
+                      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#432d52" flood-opacity="0.18" />
+                    </filter>
+                    <clipPath id="face-clip"><ellipse cx="310" cy="320" rx="164" ry="202" /></clipPath>
+                  </defs>
+
+                  <circle id="aura" cx="310" cy="310" r="270" fill="url(#aura-gradient)" />
+                  <g id="sparkles" class="cue" aria-hidden="true">
+                    <path d="M124 168v34M107 185h34M493 132v42M472 153h42" />
+                    <path d="M505 420v28M491 434h28" />
+                  </g>
+                  <g id="stress-marks" class="cue stress-cue" aria-hidden="true">
+                    <path d="M127 250l-32-11M133 224l-25-25M491 247l31-14" />
+                  </g>
+
+                  <g id="head">
+                    <g id="empathy-echo" aria-hidden="true">
+                      <ellipse cx="310" cy="320" rx="177" ry="215" />
+                    </g>
+                    <ellipse class="ear" cx="151" cy="326" rx="30" ry="47" />
+                    <ellipse class="ear" cx="469" cy="326" rx="30" ry="47" />
+                    <ellipse id="face-shape" cx="310" cy="320" rx="164" ry="202" fill="url(#face-gradient)" filter="url(#soft-shadow)" />
+
+                    <g clip-path="url(#face-clip)">
+                      <ellipse id="shadow-wash" cx="310" cy="355" rx="190" ry="230" />
+                      <ellipse id="blush-left" class="blush" cx="220" cy="352" rx="43" ry="19" />
+                      <ellipse id="blush-right" class="blush" cx="400" cy="352" rx="43" ry="19" />
+                    </g>
+
+                    <path id="brow-left" class="brow" d="M207 228 Q245 211 283 229" />
+                    <path id="brow-right" class="brow" d="M337 229 Q375 211 413 228" />
+
+                    <g id="eye-left" class="eye">
+                      <ellipse class="eye-white" cx="248" cy="282" rx="43" ry="22" />
+                      <circle id="pupil-left" class="pupil" cx="248" cy="282" r="12" />
+                      <circle id="glint-left" class="glint" cx="243" cy="276" r="4" />
+                      <path id="lid-left" class="lid-line" d="M207 282 Q248 258 289 282" />
+                    </g>
+                    <g id="eye-right" class="eye">
+                      <ellipse class="eye-white" cx="372" cy="282" rx="43" ry="22" />
+                      <circle id="pupil-right" class="pupil" cx="372" cy="282" r="12" />
+                      <circle id="glint-right" class="glint" cx="367" cy="276" r="4" />
+                      <path id="lid-right" class="lid-line" d="M331 282 Q372 258 413 282" />
+                    </g>
+
+                    <path id="nose" class="nose" d="M310 292 Q298 336 310 342 Q321 342 329 335" />
+                    <g id="nose-wrinkles" class="wrinkles" aria-hidden="true">
+                      <path d="M282 323q12-9 23-3M338 323q-12-9-23-3" />
+                    </g>
+
+                    <path id="mouth-open" class="mouth-open" d="M250 397 Q310 377 370 397 Q310 438 250 397Z" />
+                    <path id="mouth" class="mouth" d="M250 395 Q310 426 370 395" />
+                    <path id="upper-lip" class="upper-lip" d="M275 390 Q310 371 345 390" />
+                    <path id="chin" class="chin" d="M283 461 Q310 471 337 461" />
+
+                    <g id="tear" class="cue tear" aria-hidden="true">
+                      <path d="M202 307 C188 328 190 343 203 347 C218 342 218 327 202 307Z" />
+                    </g>
+                    <g id="sweat" class="cue sweat" aria-hidden="true">
+                      <path d="M443 213 C424 240 426 260 444 265 C463 257 463 238 443 213Z" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="face-caption">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span id="face-caption">Waiting for an attitude</span>
+                <button id="copy-link" class="icon-button" type="button" title="Copy share link" aria-label="Copy share link">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path id="share-icon" d="M9.5 14.5l5-5M7 17l-1.5 1.5a3.5 3.5 0 0 1-5-5L4 10a3.5 3.5 0 0 1 5 0M17 7l1.5-1.5a3.5 3.5 0 0 1 5 5L20 14a3.5 3.5 0 0 1-5 0" /></svg>
+                </button>
+                <button id="replay" class="icon-button" type="button" title="Replay the transition" aria-label="Replay the expression transition">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7" /></svg>
+                </button>
+                <span id="share-status" class="visually-hidden" aria-live="polite"></span>
+              </div>
+            </article>
+
+            <section class="controls" aria-labelledby="input-heading">
+              <div class="control-heading">
+                <div>
+                  <p class="step">Your attitude</p>
+                  <h2 id="input-heading">Compose an expression</h2>
+                </div>
+                <span class="client-badge">Runs locally</span>
+              </div>
+
+              <label class="input-label" for="attitude-input">Attitudinals</label>
+              <div class="input-wrap">
+                <textarea id="attitude-input" rows="3" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="input-help diagnostics">.ui .a'osai</textarea>
+                <span class="input-flourish" aria-hidden="true">.i</span>
+              </div>
+              <p id="input-help" class="help">Spaces and pause dots are optional. Try <code>.o'onairi'enai</code>.</p>
+              <div id="diagnostics" class="diagnostics" role="status" aria-live="polite"></div>
+
+              <div class="interpretation-heading">
+                <h3>Reading</h3>
+                <span id="confidence" class="confidence"></span>
+              </div>
+              <div id="interpretation" class="interpretation" aria-live="polite"></div>
+              <p id="confidence-note" class="confidence-note" hidden>Some attitudes are social or propositional rather than visibly facial. This rendering is an editorial cartoon convention.</p>
+
+              <div class="examples-block">
+                <h3>Try a composition</h3>
+                <div id="examples" class="examples">
+                  <button type="button" data-expression=".uecai"><span>.uecai</span><small>intense surprise</small></button>
+                  <button type="button" data-expression=".o'onaicai ri'enai"><span>.o'onaicai ri'enai</span><small>controlled anger</small></button>
+                  <button type="button" data-expression=".o'unairo'a"><span>.o'unairo'a</span><small>social discomfort</small></button>
+                  <button type="button" data-expression=".a'osai .iiru'e"><span>.a'osai .iiru'e</span><small>hope with a little fear</small></button>
+                  <button type="button" data-expression=".ii .iinai"><span>.ii .iinai</span><small>fear and security</small></button>
+                  <button type="button" data-expression=".uuse'inai"><span>.uuse'inai</span><small>pity for another</small></button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="reference" aria-labelledby="reference-title">
+          <div class="reference-intro">
+            <p class="kicker">The palette</p>
+            <h2 id="reference-title">Thirty-nine scales, not thirty-nine boxes</h2>
+            <p>Each root runs toward a distinct opposite with <code>nai</code>. CAI words select an ordered strength; an unmarked root leaves strength unspecified and uses this app's moderate display default.</p>
+            <div class="scale-key" aria-label="Intensity scale">
+              <span><b>cai</b> intense</span>
+              <span><b>sai</b> strong</span>
+              <span><b>ru'e</b> weak</span>
+              <span><b>cu'i</b> midpoint</span>
+              <span><b>nai</b> opposite pole</span>
+            </div>
+          </div>
+          <div id="attitude-groups" class="attitude-groups"></div>
+        </section>
+
+        <section class="method-note" aria-labelledby="method-title">
+          <div class="method-number">39<span>D</span></div>
+          <div>
+            <p class="kicker">About the model</p>
+            <h2 id="method-title">Semantics first, expression second</h2>
+            <p>Opposite poles use separately authored poses: expectation is not an inverted surprise face. Compound attitudes remain separate contributions, and the first receives display priority when features compete. Categories such as <code>ro'a</code> and modifiers such as <code>ri'e</code> transform the preceding expression.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Based on the attitudinal system in <cite>The Complete Lojban Language</cite>, Chapter 13. Facial mappings are interpretive, not part of the language specification.</p>
+      </footer>
+    </div>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
